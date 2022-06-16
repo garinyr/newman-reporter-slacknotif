@@ -1,3 +1,8 @@
+
+const {
+  slackUtils
+} = require('./slackUtils');
+
 function SlackNotifReporter(emitter, reporterOptions, collectionRunOptions) {
   // emitter is an event emitter that triggers the following events: https://github.com/postmanlabs/newman#newmanrunevents
   // reporterOptions is an object of the reporter specific options. See usage examples below for more details.
