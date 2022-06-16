@@ -1,12 +1,7 @@
+var slackUtils = require('./lib/util');
 
-const {
-  slackUtils
-} = require('./slackUtils');
-
-function SlackNotifReporter(emitter, reporterOptions, collectionRunOptions) {
-  // emitter is an event emitter that triggers the following events: https://github.com/postmanlabs/newman#newmanrunevents
-  // reporterOptions is an object of the reporter specific options. See usage examples below for more details.
-  // collectionRunOptions is an object of all the collection run options: https://github.com/postmanlabs/newman#newmanrunoptions-object--callback-function--run-eventemitter
+function SlackNotifReporter(emitter, reporterOptions) {
+  
   console.info("SlackNotifReporter")
   if (missingReporterOptions(reporterOptions)) {
     return;
@@ -21,6 +16,7 @@ function SlackNotifReporter(emitter, reporterOptions, collectionRunOptions) {
   const channel = reporterOptions.channel || '';
   const token = reporterOptions.token || '';
   const reportingUrl = reporterOptions.reportingurl || '';
+  let limitFailures = reporterOptions.limitFailures || null;
 
   emitter.on('done', (error, summary) => {
     if (error) {
@@ -55,4 +51,5 @@ function SlackNotifReporter(emitter, reporterOptions, collectionRunOptions) {
     return missing;
   }
 }
-module.exports = SlackNotifReporter
+
+module.exports = SlackNotifReporter;

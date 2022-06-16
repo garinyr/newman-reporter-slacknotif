@@ -1,6 +1,6 @@
 {
   "name": "newman-reporter-slacknotif",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "newman reporter slack notification",
   "main": "index.js",
   "scripts": {
@@ -23,12 +23,15 @@
     "url": "https://github.com/garinyr/newman-reporter-slacknotif/issues"
   },
   "homepage": "https://github.com/garinyr/newman-reporter-slacknotif#readme",
-  "devDependencies": {
-    "eslint": "^8.17.0"
-  },
   "dependencies": {
-    "axios": "^0.27.2",
-    "jsonminify": "^0.4.2",
-    "pretty-ms": "^8.0.0"
+    "@types/node": "^14.0.13",
+    "axios": "^0.21.1",
+    "esm": "^3.2.25",
+    "jsonminify": "^0.4.1",
+    "pretty-ms": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "jest": "^26.0.1"
   }
 }
