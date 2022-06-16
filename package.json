@@ -1,0 +1,34 @@
+{
+  "name": "newman-reporter-slacknotif",
+  "version": "1.0.0",
+  "description": "newman reporter slack notification",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garinyr/newman-reporter-slacknotif.git"
+  },
+  "keywords": [
+    "newman",
+    "postman",
+    "slack",
+    "newman reporter",
+    "custom newman reporter"
+  ],
+  "author": "Garin Yudha Ramadika",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garinyr/newman-reporter-slacknotif/issues"
+  },
+  "homepage": "https://github.com/garinyr/newman-reporter-slacknotif#readme",
+  "devDependencies": {
+    "eslint": "^8.17.0"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "jsonminify": "^0.4.2",
+    "pretty-ms": "^8.0.0"
+  }
+}
